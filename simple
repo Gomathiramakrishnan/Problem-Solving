@@ -1,0 +1,295 @@
+package day1z;
+import java.util.*;
+public class Day1z {
+	public static void main(String[] args)
+	{   
+	    Scanner s=new Scanner(System.in);
+		System.out.println("n:");
+		int n=s.nextInt();
+		for(int i=0;i<=n;i++) {
+			for(int j=0;j<=n;j++) {
+				System.out.print("*");	
+			}
+			System.out.println();
+			
+		}
+				
+	}
+}
+
+op: 
+******
+******
+******
+******
+******
+******
+
+
+
+package day1z;
+import java.util.*;
+public class Day1z {
+	public static void main(String[] args)
+	{   
+	    Scanner s=new Scanner(System.in);
+		System.out.println("n:");
+		int n=s.nextInt();
+		for(int i=0;i<=n;i++) {
+			for(int j=i;j<=n-1;j++) {
+				System.out.print(" ");	
+			}
+			for(int k=0;k<=n;k++) {
+				System.out.print("*");
+			}
+			System.out.println();
+			
+		}
+				
+	}
+}
+
+op:
+    *****
+   *****
+  *****
+ *****
+*****
+
+
+
+package day1z;
+import java.util.*;
+public class Day1z {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		for(int i=1;i<=n;i++) {
+			for(int j=1;j<=n;j++) {
+				if(i==j || i+j==n+1) {
+					System.out.print("X ");
+				}
+				else
+					System.out.print(" ");
+			}
+			System.out.println();
+		}
+	
+   }
+}
+
+
+op:
+
+5
+X    X 
+ X  X  
+  X   
+ X  X  
+X    X 
+
+
+
+
+package day1z;
+import java.util.*;
+public class Day1z {
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		for(int i=1;i<=n;i++) {
+			for(int j=1;j<=n;j++) {
+				int k=i+j-1;
+				if(k>n) {
+					k=k-4;
+				}
+				System.out.print(k+" ");
+			}
+
+			System.out.println();
+		}
+	
+   }
+}
+
+
+
+
+op:
+
+4
+1 2 3 4 
+2 3 4 1 
+3 4 1 2 
+4 1 2 3 
+
+
+
+
+package day1z;
+import java.util.*;
+class Day1z{
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		for(int row=0;row<n;row++) {
+			for(int col=row-1;col<n;col++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+op:
+5
+******
+*****
+****
+***
+**
+
+
+
+package day1z;
+import java.util.*;
+class Day1z{
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		for(int row=0;row<n;row++) {
+			for(int col=row;col<n;col++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+
+op:
+
+5
+*****
+****
+***
+**
+*
+
+
+package day1z;
+import java.util.*;
+class Day1z{
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		for(int row=0;row<n;row++) {
+			for(int col=0;col<=row;col++) {
+				System.out.print(" ");
+			}
+			for(int k=0;k<n;k++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+op:
+
+5
+ *****
+  *****
+   *****
+    *****
+     *****
+
+
+
+
+package day1z;
+import java.util.*;
+class Day1z{
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		for(int row=0;row<n;row++) {
+			for(int col=0;col<n;col++) {
+				if(row==0||col==0||row==n-1||col==n-1) {
+				System.out.print("*");
+			}
+				else
+					
+					System.out.print(" ");
+		
+			}
+			System.out.println();
+		}
+	}
+}
+
+op:
+
+4
+****
+*  *
+*  *
+****
+
+
+
+public class NumberPattern {
+
+    public static void main(String[] args) {
+        printPattern();
+    }
+
+    private static void printPattern() {
+        int rows = 4;
+
+        // Upper part of the pattern
+        for (int i = 1; i <= rows; i++) {
+            printLine(i, rows);
+        }
+
+        // Lower part of the pattern (mirror image of the upper part)
+        for (int i = rows; i >= 1; i--) {
+            printLine(i, rows);
+        }
+    }
+
+    private static void printLine(int row, int totalRows) {
+        // Print leading spaces
+        for (int space = 0; space < totalRows - row; space++) {
+            System.out.print(" ");
+        }
+
+        // Calculate the starting number for this row
+        int startNum = (row * (row + 1)) / 2;
+        
+        // Print the numbers in descending order
+        for (int num = startNum; num > startNum - row; num--) {
+            System.out.print(num + " ");
+        }
+        
+        // Move to the next line
+        System.out.println();
+    }
+}
+
+
+
+
+Op
+   1 
+  3 2 
+ 6 5 4 
+10 9 8 7 
+10 9 8 7 
+ 6 5 4 
+  3 2 
+   1
+
+
+

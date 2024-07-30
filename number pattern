@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        
+        for(int r=1;r<=n;r++){
+            if(n>=10){
+            System.out.println("Invalid Input");
+                break;
+        }
+            for(int c=1;c<=r;c++){
+                 System.out.print(c);
+            }
+            for(int k=1;k<r;k++){
+                 System.out.print(r-k);
+            }
+             System.out.println();
+        }
+    }
+}
+
+
+1
+121
+12321
+1234321
+123454321
